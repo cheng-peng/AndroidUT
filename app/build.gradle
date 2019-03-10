@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+    testOptions.unitTests.includeAndroidResources = true
     defaultConfig {
         applicationId "com.cxp.androidut"
         minSdkVersion 15
@@ -14,6 +15,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
         }
     }
 }
@@ -29,4 +36,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     //mockito 测试
     testImplementation "org.mockito:mockito-core:2.8.9"
+    //powermock 测试
+    testImplementation "org.powermock:powermock-module-junit4:1.7.3"
+    testImplementation "org.powermock:powermock-module-junit4-rule:1.7.3"
+    testImplementation "org.powermock:powermock-api-mockito2:1.7.3"
+    testImplementation "org.powermock:powermock-classloading-xstream:1.7.3"
+    //robolectric
+    testImplementation "org.robolectric:robolectric:3.8"
+    testImplementation 'org.robolectric:shadows-support-v4:3.4-rc2'
+    testImplementation "com.android.support.test:runner:1.0.2"
 }
