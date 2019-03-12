@@ -16,7 +16,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
 
 /**
- * 文 件 名: LoginActivity
+ * 文 件 名: LoginMvpActivity
  * 创 建 人: CXP
  * 创建日期: 2019-03-10 22:00
  * 描    述:

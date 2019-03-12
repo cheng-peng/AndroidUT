@@ -22,7 +22,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
- * 文 件 名: LoginActivityTest
+ * 文 件 名: LoginMvpActivityTest
  * 创 建 人: CXP
  * 创建日期: 2019-03-11 14:00
  * 描    述:

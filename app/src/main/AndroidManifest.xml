@@ -12,17 +12,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity">
+
+        <activity android:name=".espresso.EspressoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".espresso.simple.SimpleActivity"/>
+        <activity android:name=".espresso.async.AsyncActivity"/>
+        <activity android:name=".espresso.list.ListActivity"/>
+        <activity android:name=".espresso.rotate.RotateActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".espresso.toolbar.ToolbarActivity"/>
+        <activity android:name=".espresso.async2.AsyncActivity2"/>
+        <activity android:name=".espresso.okhttp.OkHttpActivity"/>
+
+
+        <activity android:name=".ui.MainActivity" />
 
         <activity
-            android:label="@string/login"
-            android:name=".ui.LoginActivity"/>
+            android:name=".ui.LoginActivity"
+            android:label="@string/login" />
+
+        <activity
+            android:name=".mvp.ui.LoginMvpActivity"
+            android:label="@string/login" />
 
         <receiver
             android:name=".broadcast.MyReceiver"
@@ -34,8 +51,8 @@
         </receiver>
 
         <service
-            android:exported="false"
-            android:name=".service.MyService"/>
+            android:name=".service.MyService"
+            android:exported="false" />
 
     </application>
 
